@@ -21,7 +21,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col"><h2>Serwis</h2></div>
+                <!-- <div class="col"><h2>Serwis</h2></div>
             </div>
             <form action="" class="row g-3">
                 <div class="col-md-6">
@@ -124,44 +124,56 @@
                 <div class="col-12">
                     <button class="btn btn-primary">Dodaj</button>
                 </div>
-            </form>
+            </form> -->
 
             <h2 class="container">Add Aggregate</h2>
-            <form action="" class="row g-3">
+            <form action="" id="addDeviceForm" class="row g-3">
                 <div class="col-md-6">
                     <label for="" class="form-label">Producent</label>
-                    <input type="text" name="" id="" class="form-control" />
+                    <input type="text" name="device-producer" id="" data-errorMessage="Podaj producenta" class="form-control" />
                 </div>
                 <div class="col-md-6">
                     <label for="work" class="form-label">Model</label>
-                    <input type="text" name="" id="" class="form-control" />
+                    <input type="text" name="device-model" id="" data-errorMessage="Podaj model" class="form-control" />
                 </div>
                 <div class="col-md-6">
                     <label for="work" class="form-label">Numer seryjny</label>
-                    <input type="text" name="" id="" class="form-control" />
+                    <input type="text" name="device-serialNumber" id="" data-errorMessage="Podaj numer seryjny" class="form-control" />
                 </div>
                 <div class="col-md-6">
                     <label for="work" class="form-label"
                         >Zewnętrzna skrzynka sterownicza</label
                     >
-                    <select class="form-select" name="" id="">
-                        <option value="1">Nie</option>
-                        <option value="2">Tak</option>
+                    <select
+                        class="form-select"
+                        name="electricalCabinet"
+                        id="outerElectricBox"
+                    >
+                        <option value="0">Nie</option>
+                        <option value="1">Tak</option>
                     </select>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 control-panel">
                     <label for="" class="form-label">Model</label>
-                    <input type="text" name="" id="" class="form-control" />
+                    <input type="text" data-option="additionally field" name="device-cp-model" id="" data-errorMessage="Podaj model skrzynki elektrycznej" class="form-control" />
                 </div>
-                <div class="col-md-6">
-                    <label for="work" class="form-label">Nr seryjny</label>
-                    <input type="text" name="" id="" class="form-control" />
+                <div class="col-md-6 control-panel">
+                    <label for="" class="form-label">Nr seryjny</label>
+                    <input type="text" data-option="additionally field" name="device-cp-serial-number" id="" data-errorMessage="Podaj numer seryjny skrzynki elektrycznej" class="form-control" />
                 </div>
 
                 <div class="col-12">
-                    <button class="btn btn-primary">Dodaj</button>
+                    <button id="addDeviceBtn" class="btn btn-primary">Dodaj</button>
                 </div>
             </form>
+            <div class="alert alert-danger result-alerts">
+                <ol>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container">
+            <p class="result"></p>
         </div>
     </body>
     <script
@@ -169,6 +181,5 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"
     ></script>
-    <script src="./class/Aggregate.js"></script>
-    <script src="./class/Services.js"></script>
+    <script type="module" src="./app.js"></script>
 </html>

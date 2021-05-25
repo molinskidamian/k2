@@ -96,16 +96,4 @@ article.article > footer {
   padding: 10px 50px;
   border-top: 1px solid #dee0e3;
 }
-
-.control-panel {
-  display: none;
-}
-
-.show-field {
-  display: block;
-}
-
-.result-alerts {
-  display: none;
-}
 /*# sourceMappingURL=style.css.map */

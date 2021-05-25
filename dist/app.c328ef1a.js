@@ -159,6 +159,9 @@ addBtn.addEventListener("click", function (e) {
   var controlPanelSerialNumber = addDeviceForm.querySelector('input[name="controlPanelSerialNumber"]');
   console.log(producer.value);
   console.log(model.value);
+  console.log(serialNumber.value);
+  console.log(controlPanelModel.value);
+  console.log(controlPanelSerialNumber.value);
   console.log("Formularz wysłano!");
 });
 },{"./Device.js":"Device.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -189,7 +192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57812" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49462" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
