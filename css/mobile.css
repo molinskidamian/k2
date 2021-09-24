@@ -1,1 +1,54 @@
-/* No CSS *//*# sourceMappingURL=mobile.css.map */
+.mobile-main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.mobile-main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-main-nav ul > li {
+  border: 1px dashed white;
+  width: 100%;
+  height: 100%;
+  line-height: 6.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-main-nav ul > li a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile-main-nav ul > li a img {
+  width: 1.5rem;
+}
+
+.mobile-main-nav ul > li:last-child {
+  background-color: red;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4.75rem;
+  bottom: 7rem;
+  right: 2rem;
+}
+/*# sourceMappingURL=mobile.css.map */
