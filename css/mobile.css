@@ -1,8 +1,24 @@
+.red {
+  background-color: #64ea86;
+}
+
+.green {
+  border-bottom: 6px solid #64ea86;
+}
+
+.orange {
+  border-bottom: 6px solid #efd93b;
+}
+
+body {
+  background-color: #27293b;
+}
+
 .mobile-main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ccc;
+  background-color: #2f3247;
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -24,31 +40,88 @@
 }
 
 .mobile-main-nav ul > li {
-  border: 1px dashed white;
+  border-top: 1px solid #353d4e;
   width: 100%;
   height: 100%;
-  line-height: 6.5rem;
+  line-height: 1.25rem;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
 }
 
 .mobile-main-nav ul > li a {
   text-decoration: none;
-  color: white;
+  color: #757886;
 }
 
-.mobile-main-nav ul > li a img {
+.mobile-main-nav ul > li a svg {
   width: 1.5rem;
+  height: 2rem;
+}
+
+.mobile-main-nav ul > li a:hover {
+  color: #fff;
 }
 
 .mobile-main-nav ul > li:last-child {
-  background-color: red;
   position: fixed;
   width: 4rem;
   height: 4rem;
-  line-height: 4.75rem;
-  bottom: 7rem;
-  right: 2rem;
+  bottom: 6rem;
+  right: 1rem;
+  border: 1px solid #353d4e;
+  border-radius: 0.5rem;
+}
+
+.mobile-activities div {
+  display: block;
+  height: 4rem;
+  line-height: 4rem;
+  margin: 2rem auto;
+  background-color: #3b3e52;
+  color: #fff;
+  width: 80vw;
+  border-radius: 1rem;
+  border: 1px solid #353d4e;
+}
+
+.mobile-activities div label {
+  margin-left: 0.75rem;
+}
+
+.mobile-activities div input {
+  margin-left: 1rem;
+}
+
+.mobile-air-condition-local-points-wrapper {
+  outline: 1px dashed red;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 0.6rem;
+          column-gap: 0.6rem;
+  row-gap: 0.6rem;
+  padding: 1rem;
+}
+
+.mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point {
+  background-color: #3b3e52;
+  width: 30vw;
+  height: 10rem;
+  border: 1px solid #353d4e;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point h3 {
+  color: #fff;
+}
+
+.mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point p {
+  color: #757886;
 }
 /*# sourceMappingURL=mobile.css.map */

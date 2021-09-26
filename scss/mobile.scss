@@ -1,9 +1,36 @@
 $mobile-height: 5rem;
 $mobile-menu-icons-size: 1.5rem;
+$mobile-bg-first: #2f3247;
+$mobile-bg-second: #27293b;
+$mobile-color-font-nav-link: #757886;
+$border: 1px solid #353d4e;
+
+$color-red: #ea5455;
+$color-orange: #efd93b;
+$color-green: #64ea86;
+
+$color-text: #fff;
+$color-text-second: #757886;
+
+.red {
+    background-color: $color-green;
+}
+
+.green {
+    border-bottom: 6px solid $color-green;
+}
+
+.orange {
+    border-bottom: 6px solid $color-orange;
+}
+
+body {
+    background-color: $mobile-bg-second;
+}
 
 .mobile-main-nav {
     display: flex;
-    background-color: #ccc;
+    background-color: $mobile-bg-first;
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -17,34 +44,93 @@ $mobile-menu-icons-size: 1.5rem;
         align-items: center;
 
         & > li {
-            border: 1px dashed white;
+            border-top: $border;
             width: 100%;
             height: 100%;
-            line-height: $mobile-height + $mobile-menu-icons-size;
+            // line-height: $mobile-height + $mobile-menu-icons-size;
+            line-height: $mobile-height / 4;
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding: 1rem 0;
 
             a {
+                // background-color: red;
                 // outline: 1px solid blue;
                 text-decoration: none;
                 // line-height: $mobile-height;
-                color: white;
+                color: $mobile-color-font-nav-link;
 
-                img {
+                svg {
                     width: $mobile-menu-icons-size;
+                    height: 2rem;
+                }
+
+                &:hover {
+                    color: #fff;
                 }
             }
 
             &:last-child {
-                background-color: red;
+                // background-color: red;
                 position: fixed;
                 width: 4rem;
                 height: 4rem;
-                line-height: 4.75rem;
-                bottom: 7rem;
-                right: 2rem;
+                // line-height: $mobile-height + $mobile-menu-icons-size;
+                bottom: 6rem;
+                right: 1rem;
+                border: $border;
+                border-radius: 0.5rem;
             }
+        }
+    }
+}
+
+.mobile-activities {
+    // display: flex;
+    // flex-direction: column;
+    div {
+        display: block;
+        height: 4rem;
+        line-height: 4rem;
+        margin: 2rem auto;
+        background-color: #3b3e52;
+        color: #fff;
+        width: 80vw;
+        border-radius: 1rem;
+        border: $border;
+
+        label {
+            margin-left: 0.75rem;
+        }
+
+        input {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.mobile-air-condition-local-points-wrapper {
+    outline: 1px dashed red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+    padding: 1rem;
+    .mobile-air-condition-local-point {
+        background-color: #3b3e52;
+        width: 30vw;
+        height: 10rem;
+        border: $border;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+
+        h3 {
+            color: $color-text;
+        }
+
+        p {
+            color: $color-text-second;
         }
     }
 }
