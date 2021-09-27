@@ -11,9 +11,9 @@ $color-green: #64ea86;
 
 $color-text: #fff;
 $color-text-second: #757886;
-
-.red {
-    background-color: $color-green;
+$color-header: #fff;
+.point-red {
+    border-bottom: $color-red;
 }
 
 .green {
@@ -111,19 +111,76 @@ body {
 
 .mobile-air-condition-local-points-wrapper {
     outline: 1px dashed red;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    column-gap: 0.6rem;
-    row-gap: 0.6rem;
-    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 70vh;
+
+    header {
+        color: $color-header;
+        // margin-bottom: 1rem;
+    }
+
+    header > h3 {
+        display: block;
+        width: 100vw;
+        padding-left: 2rem;
+        font-weight: 600;
+        height: 3rem;
+        line-height: 3rem;
+        background-color: $mobile-bg-first;
+    }
+
+    header > ul {
+        background-color: $mobile-bg-second;
+        display: flex;
+        justify-content: space-around;
+        max-width: 100%;
+        flex-wrap: nowrap;
+        list-style: none;
+        // outline: 1px dashed red;
+        margin: 1rem 0;
+        // width: 200%;
+
+        li {
+            border: $border;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+
+            &:hover {
+                background-color: #666878;
+            }
+        }
+
+        a {
+            color: #6d707e;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+
+            &:hover {
+                height: 100%;
+                width: 100%;
+                color: #fff;
+            }
+        }
+    }
+
     .mobile-air-condition-local-point {
         background-color: #3b3e52;
-        width: 30vw;
-        height: 10rem;
+        width: 28vw;
+        height: 8rem;
         border: $border;
         border-radius: 0.5rem;
         padding: 0.5rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+
+        footer {
+            position: absolute;
+            bottom: 0;
+        }
 
         h3 {
             color: $color-text;
@@ -131,6 +188,7 @@ body {
 
         p {
             color: $color-text-second;
+            line-height: 1.3rem;
         }
     }
 }

@@ -1,5 +1,5 @@
-.red {
-  background-color: #64ea86;
+.point-red {
+  border-bottom: #ea5455;
 }
 
 .green {
@@ -95,26 +95,82 @@ body {
 
 .mobile-air-condition-local-points-wrapper {
   outline: 1px dashed red;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 0.6rem;
-          column-gap: 0.6rem;
-  row-gap: 0.6rem;
-  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-height: 70vh;
+}
+
+.mobile-air-condition-local-points-wrapper header {
+  color: #fff;
+}
+
+.mobile-air-condition-local-points-wrapper header > h3 {
+  display: block;
+  width: 100vw;
+  padding-left: 2rem;
+  font-weight: 600;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #2f3247;
+}
+
+.mobile-air-condition-local-points-wrapper header > ul {
+  background-color: #27293b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.mobile-air-condition-local-points-wrapper header > ul li {
+  border: 1px solid #353d4e;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.mobile-air-condition-local-points-wrapper header > ul li:hover {
+  background-color: #666878;
+}
+
+.mobile-air-condition-local-points-wrapper header > ul a {
+  color: #6d707e;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-air-condition-local-points-wrapper header > ul a:hover {
+  height: 100%;
+  width: 100%;
+  color: #fff;
 }
 
 .mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point {
   background-color: #3b3e52;
-  width: 30vw;
-  height: 10rem;
+  width: 28vw;
+  height: 8rem;
   border: 1px solid #353d4e;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point h3 {
@@ -123,5 +179,6 @@ body {
 
 .mobile-air-condition-local-points-wrapper .mobile-air-condition-local-point p {
   color: #757886;
+  line-height: 1.3rem;
 }
 /*# sourceMappingURL=mobile.css.map */
