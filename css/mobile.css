@@ -15,6 +15,7 @@ body {
 }
 
 .mobile-main-nav {
+  z-index: 10000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +65,7 @@ body {
 }
 
 .mobile-main-nav ul > li:last-child {
+  background-color: red;
   position: fixed;
   width: 4rem;
   height: 4rem;
@@ -71,6 +73,7 @@ body {
   right: 1rem;
   border: 1px solid #353d4e;
   border-radius: 0.5rem;
+  z-index: 1000;
 }
 
 .mobile-activities div {
@@ -103,6 +106,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   max-height: 70vh;
+  overflow: auto;
 }
 
 .mobile-air-condition-local-points-wrapper header {

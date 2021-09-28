@@ -1,3 +1,4 @@
+// $mobile-height: 8vh;
 $mobile-height: 5rem;
 $mobile-menu-icons-size: 1.5rem;
 $mobile-bg-first: #2f3247;
@@ -29,6 +30,7 @@ body {
 }
 
 .mobile-main-nav {
+    z-index: 10000;
     display: flex;
     background-color: $mobile-bg-first;
     position: fixed;
@@ -71,7 +73,7 @@ body {
             }
 
             &:last-child {
-                // background-color: red;
+                background-color: red;
                 position: fixed;
                 width: 4rem;
                 height: 4rem;
@@ -80,6 +82,7 @@ body {
                 right: 1rem;
                 border: $border;
                 border-radius: 0.5rem;
+                z-index: 1000;
             }
         }
     }
@@ -115,6 +118,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     max-height: 70vh;
+    overflow: auto;
 
     header {
         color: $color-header;
